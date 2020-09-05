@@ -1,0 +1,191 @@
+<html>
+
+ 
+
+<head>
+
+<title>REGISTATION FORM</title>
+
+<link rel="stylesheet" type="text/css" href=style.css>
+
+<script type="text/javascript" src="javascript.js"></script>
+
+</head>
+
+ 
+
+<body>
+
+<h1>Online Registration Form</h1>
+
+<form name="myform" id="registation" action="result.html" method="GET" onsubmit="return ValidationForm()">
+
+<div>
+
+<label>First Name:</label>
+
+<span>*</span>
+
+<br>
+
+<input type="text" name="fname" id="fname" placeholder="Enter Your First Name" maxlength=12 onkeypress="return onlyAlphabetsFirst(event,this);"
+
+onkeyup="nameFunction()" required>
+
+<p id="name1"></p>
+
+</div>
+
+<div>
+
+<label>Last Name:</label>
+
+<span>*</span>
+
+<br>
+
+<input type="text" name="lname" id="lname" placeholder="Enter Your Last Name" onkeypress="return onlyAlphabetsLast(event,this);"
+
+onkeyup="lnameFunction()" required>
+
+<p id="name2"></p>
+
+</div>
+
+<div>
+
+<label>Mobile Number:</label>
+
+<span>*</span>
+
+<br>
+
+<select id="phone">
+
+<option value="m1">+111</option>
+
+<option value="m2">+05</option>
+
+<option value="m1">+01</option>
+
+<option value="m2">+85</option>
+
+<option value="m1">+221</option>
+
+<option value="m2">+99</option>
+
+<option value="m3" selected>+91</option>
+
+</select>
+
+<!-- // <input type="text" ID="mobilenum"placeholder="Enter mobile number" maxlength="10" validate=" /^[6-9]\d{9}$/"onkeypress="return onlyNumbersandPlus(event);" CssClass="validate"></input> -->
+
+<input type="text" ID="mobilenum" placeholder="Enter mobile number" validate maxlength=10 onkeypress="return onlyNumbersandPlus(event);"
+
+onkeyup="mobieNumber()"></input>
+
+<p id="m2"></p>
+
+</div>
+
+<div>
+
+<label>Email:</label>
+
+<span>*</span>
+
+<br>
+
+<input type="email" name="email" id="email" placeholder="Enter Your Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+
+onkeyup="ValidateEmails()" required>
+
+<p id="m3"></p>
+
+<br>
+
+</div>
+
+<div>
+
+<p>Please select your gender:</p>
+
+<input type="radio" id="male" name="gender" value="male">
+
+<label for="male">Male</label>
+
+<br>
+
+<input type="radio" id="female" name="gender" value="female">
+
+<label for="female">Female</label>
+
+<br>
+
+<input type="radio" id="other" name="gender" value="other">
+
+<label for="other">Other</label>
+
+<br>
+
+</div>
+
+<div>
+
+<label>Password:</label>
+
+<span>*</span>
+
+<br>
+
+<input type="password" name="password" id="password" placeholder="Enter Your Password" maxlength="14" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,14}"
+
+"passwordcheck()" required>
+
+<br>
+
+<p id="p1"></p>
+
+</div>
+
+<div>
+
+<label>Conform Password:</label>
+
+<span>*</span>
+
+<br>
+
+<input type="password" name="rpassword" id="rpassword" placeholder="Re Enter Your Password" required>
+
+<br>
+
+<p id="p2"></p>
+
+<input type="checkbox" onclick="Toggle()">
+
+<b>Show Password</b>
+
+</div>
+
+<div>
+
+<p>Password Most contain one capital letter one small letter and one number and alteast 8 char</p>
+
+</div>
+
+ 
+
+<div>
+
+<button type="submit" id="submit" value="submit">submit</button>
+
+</div>
+
+</form>
+
+</body>
+
+ 
+
+</html>
